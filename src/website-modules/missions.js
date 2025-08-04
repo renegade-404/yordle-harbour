@@ -6,7 +6,6 @@ import vilebloom from "../imgs/vilebloom.png";
 
 export const missionBoard = function() {
     const content = document.querySelector("#content");
-    content.innerHTML = "";
 
 
     // create parent elements
