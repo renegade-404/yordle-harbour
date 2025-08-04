@@ -1,3 +1,28 @@
+/*fonts*/
+@font-face {
+  font-family: "Macondo Swash Caps";
+  src: url('./fonts/macondoswashcaps-regular-webfont.woff2') format('woff2'),
+       url('./fonts/macondoswashcaps-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: "Germania One";
+    src: url('./fonts/germaniaone-regular-webfont.woff2') format('woff2'),
+         url('./fonts/germaniaone-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+:root {
+  --main-font: "Macondo Swash Caps";
+  --fallback-fonts: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+     Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
 /*normalize*/
 *, *::before, *::after {
   box-sizing: border-box;
@@ -7,8 +32,12 @@
 }
 
 body {
+  font-family: var(--main-font), var(--fallback-fonts);
+  font-size: 1.2rem;
   width: 100vw;
   height: 100vh;
+  margin-top: 0.5rem;
+  background-color: #F9F3EF;
 
   display: flex;
   flex-direction: column;
@@ -40,10 +69,42 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*styling*/
-
 nav {
   display: flex;
   gap: 2rem;
+
+  padding: 1rem;
+}
+
+nav, #content {
+  border: 5px solid #213448;
+  border-radius: 10px;
+  background-color: #94B4C1;
+}
+
+h2 {
+  font-family: "Germania One";
+}
+
+footer {
+  background-color: #213448;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+button {
+  border: 3px solid #213448;
+  border-radius: 10px;
+  background-color: #ECEFCA;
+  transition: 0.5s;
+
+  &:hover {
+    background-color: #213448;
+    color: white;
+
+  }
 }
 
 #content {
@@ -51,7 +112,7 @@ nav {
   width: 50%;
   height: 100%;
   margin: 0 auto;
-  border: 2px solid green;
+
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -103,15 +164,22 @@ ul {
 
 .missions-placeholder {
   display: grid;
-  grid-template-rows: repeat(4, 150px);
-  gap: 1rem;
+  grid-template-rows: repeat(4, 200px);
+  gap: 2rem;
   overflow: auto;
+  justify-content: center;
+
 }
 
 .missions-placeholder > * {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: space-between;
+
+  padding: 10px;
+  width: 35vw;
+  border: 5px solid #780C28;
+  border-radius: 10px;
+  background-color: #ECEFCA;
 }
 
 .mission-div {
@@ -120,12 +188,13 @@ ul {
   gap: 1rem;
 
   & > p {
-    width: 45ch;
+    text-wrap: wrap;
+
   }
 }
 
 .mission-img {
-  width: 15%;
+  width: 25%;
   height: 90%;
 }
 
