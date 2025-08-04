@@ -17,8 +17,10 @@ const runningPage = (function() {
         button.addEventListener("click", (e) => {
             let classList = e.target.classList;
             for (let key in pageModules) {
-                if (classList.contains(key)) {
+                if (classList.contains(key)) { 
                     const content = document.querySelector("#content");
+                    if (key == "contact") content.style.flexDirection = "row";
+                    else content.style.flexDirection = "column";
                     content.innerHTML = "";
                     pageModules[key]();
                 } 
