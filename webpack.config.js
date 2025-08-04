@@ -30,7 +30,14 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg)$/i,
                 type: "asset/resource",
-            }
+            },
+            {
+  		test: /\.(woff2?|ttf|eot|otf)$/,
+  		type: 'asset/resource',
+  		generator: {
+    		  filename: 'fonts/[name][ext]',
+  		},
+	    },
         ],
     },
 };
