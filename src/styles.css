@@ -55,10 +55,11 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+
 }
 
 /*Home styling*/
-.welcome-sign {
+.welcome-sign, .board-message {
   text-align: center;
 }
 
@@ -89,3 +90,33 @@ ul {
 }
 
 /*Mission's Board styling*/
+
+.board-message {
+  text-align: center;
+}
+
+.missions-placeholder {
+  display: grid;
+  grid-template-rows: repeat(4, minmax(150px, 250px));
+  gap: 1rem;
+  overflow: auto;
+}
+
+.missions-placeholder > * {
+  display: flex;
+  justify-content: center;
+}
+
+.mission-div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  width: 50%;
+}
+
+.mission-img {
+  width: 15%;
+  height: 90%;
+}
+
