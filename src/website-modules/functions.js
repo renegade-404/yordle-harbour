@@ -14,31 +14,32 @@ export function makeElements(elementList, parent) {
 }
 
 export function createMissions(parent, arr) {
-  arr.forEach(({title, description, imgSrc}, count) => {
+  arr.forEach(({title, description, imgSrc}) => {
     const missionsHolder = document.createElement("div");
     parent.appendChild(missionsHolder);
 
     const div = document.createElement("div");
-    div.classList.add("mission-div" + count);
+    div.classList.add("mission-div");
     missionsHolder.appendChild(div);
 
     const img = document.createElement("img");
-    img.classList.add("mission-img" + count);
+    img.classList.add("mission-img");
     img.src = imgSrc;
     missionsHolder.appendChild(img);
 
     const h2 = document.createElement("h2");
-    h2.classList.add("mission-header" + count);
+    h2.classList.add("mission-header");
     div.appendChild(h2);
     h2.innerText = title;
 
     const para = document.createElement("p");
-    para.classList.add("mission-para" + count);
+    para.classList.add("mission-para");
     para.innerText = description;
     div.appendChild(para);
 
   });
 }
+
 
 
 // function makeNestedElements(elementList, outerParent) {
