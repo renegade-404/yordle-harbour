@@ -18,10 +18,8 @@ const runningPage = (function() {
             let classList = e.target.classList;
             for (let key in pageModules) {
                 if (classList.contains(key)) {
-                    let oldContent = document.querySelector("#content");
-                    let newContent = document.createElement("div");
-                    document.body.replaceChild(newContent, oldContent);
-                    newContent.id = "content";
+                    const content = document.querySelector("#content");
+                    content.innerHTML = "";
                     pageModules[key]();
                 } 
             }
