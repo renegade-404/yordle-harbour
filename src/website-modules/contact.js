@@ -16,9 +16,14 @@ export const contactPage = function() {
 
     const contactInfoContent = [
         ["h2", "contact-header", "", "These are my contact info! Check'em out!"],
-        ["p", "contact-para", "", `Whether you're lost in the brush, tracking an elusive beast, or just need someone to ward your inbox — I'm only a message away.
-        📬 Send a raven (or, you know, an email) to: hunter@voidscallers.net
-        🧭 Or drop a scroll at our base: Summoner's Path 9, Zaun Outskirts, Runeterra`]
+        ["p", "contact-para", "", `Whether you're lost in the brush, tracking an elusive beast, or just need someone
+        to ward your inbox — I'm only a message away.
+
+        📬 Send a raven (or, you know, an email) to:
+         hunter@voidscallers.net
+         
+        🧭 Or drop a scroll at our base:
+         Summoner's Path 9, Zaun Outskirts, Runeterra`]
     ]
 
     makeElements(contactInfoContent, createdMainElements.contactBox);
