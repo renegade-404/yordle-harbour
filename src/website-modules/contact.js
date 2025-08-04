@@ -15,9 +15,11 @@ export const contactPage = function() {
     createdMainElements.chickpeaContactImage.src = chickpeaContactImg;
 
     const contactInfoContent = [
-        ["h2", "contact-header", "", "These are my contact info! Check'em out!"],
-        ["p", "contact-para", "", `Whether you're lost in the brush, tracking an elusive beast, or just need someone
-        to ward your inbox — I'm only a message away.
+        ["h2", "contact-header", "", `These are my contact info!
+        Check'em out!`],
+        ["p", "contact-para", "", `Whether you're lost in the brush, tracking
+        an elusive beast, or just need someone to ward
+        your inbox — I'm only a message away.
 
         📬 Send a raven (or, you know, an email) to:
          hunter@voidscallers.net
